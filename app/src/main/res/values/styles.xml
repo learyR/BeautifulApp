@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!-- Base application theme. -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:listDivider">@color/color_divider</item>
+        <item name="widgetBackground">@color/window_background</item>
+        <item name="widgetBackgroundDark">@color/window_background_dark</item>
+        <item name="widgetBackgroundTitle">@android:color/white</item>
+        <item name="selectableItemBackgroundGeneral">@drawable/selectable_item_background_general
+        </item>
+        <item name="navigationItemTextColor">@color/navigation_item_text</item>
+        <item name="referenceText">@color/reference_text</item>
+        <item name="referenceBackground">@drawable/reference_background</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="baseWidgetBackground">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="SwipeBackLayout">
+        <item name="edge_size">50dip</item>
+        <item name="shadow_left">@mipmap/shadow_left</item>
+        <item name="shadow_right">@mipmap/shadow_right</item>
+        <item name="shadow_bottom">@mipmap/shadow_bottom</item>
+    </style>
+</resources>

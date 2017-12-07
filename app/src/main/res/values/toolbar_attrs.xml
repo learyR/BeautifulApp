@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FamiliarToolbar">
+
+
+        <!--设置左侧标题-->
+        <attr name="leftTitle" format="string|reference" />
+        <!--设置左侧图标-->
+        <attr name="leftImage" format="reference" />
+        <!--设置左侧标题颜色-->
+        <attr name="leftTitleColor" format="color|reference" />
+        <!--是否显示右侧控件(all：都显示, navigationImg：只显示图标,navigationTxt:只显示文本, nothing:都不显示)-->
+        <attr name="showLeft" format="enum">
+            <enum name="all" value="0"/>
+            <enum name="navigationImg" value="1"/>
+            <enum name="navigationTxt" value="2"/>
+            <enum name="none" value="3"/>
+        </attr>
+
+        <!--是否显示标题-->
+        <attr name="showTitle" format="boolean" />
+        <!--设置标题文本-->
+        <attr name="titleContent" format="string|reference" />
+        <!--设置图标位置：只能在文本左右设置，当文本为空时，只显示图标,nothing:不设置图标-->
+        <attr name="titleImagePosition" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+            <enum name="nothing" value="2"/>
+        </attr>
+        <!--设置标题图标-->
+        <attr name="titleImage" format="reference" />
+        <!--设置标题与图标距离-->
+        <attr name="titleImagePadding" format="dimension|reference" />
+        <!--标题颜色-->
+        <attr name="titleColor" format="color|reference" />
+
+        <attr name="titleArrowImage" format="reference" />
+        <attr name="showTitleArrowImage" format="boolean" />
+
+        <!--是否显示右侧控件(notify：通知控件, normal：普通控件, nothing:不显示)-->
+        <attr name="showRight" format="enum">
+            <enum name="notify" value="0"/>
+            <enum name="normal" value="1"/>
+            <enum name="notAll" value="2"/>
+        </attr>
+        <!--设置通知控件图标-->
+        <attr name="rightNotifyImage" format="reference" />
+        <!--设置通知控件提示文本-->
+        <attr name="rightNotifyText" format="string|reference" />
+        <!--通知文本颜色-->
+        <attr name="rightNotifyTextColor" format="color|reference" />
+        <!--设置普通控件文本-->
+        <attr name="rightNormalText" format="string|reference" />
+        <!--右侧文字颜色颜色-->
+        <attr name="rightNormalTextColor" format="color|reference" />
+        <!--设置图标位置：只能在文本左右设置，当文本为空时，只显示图标-->
+        <attr name="rightNormalImagePosition" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+            <!--不需要图标-->
+            <enum name="nothing" value="2"/>
+        </attr>
+        <!--设置标题图标-->
+        <attr name="rightNormalImage" format="reference" />
+        <!--设置标题与图标距离-->
+        <attr name="rightNormalImagePadding" format="dimension|reference" />
+    </declare-styleable>
+    <declare-styleable name="SwipeBackLayout">
+        <attr name="edge_size" format="dimension" />
+        <attr name="edge_flag">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="all" value="3" />
+        </attr>
+        <attr name="shadow_left" format="reference" />
+        <attr name="shadow_right" format="reference" />
+        <attr name="shadow_bottom" format="reference" />
+    </declare-styleable>
+</resources>

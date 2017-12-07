@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imageloader_uri" type="id"/>
+    <item name="base_toolbar" type="id"/>
+    <item name="base_refreshLayout" type="id"/>
+    <item name="base_recyclerView" type="id"/>
+    <item name="base_error_layout" type="id"/>
+</resources>

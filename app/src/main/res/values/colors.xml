@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff0195ff</color>
+    <color name="colorPrimaryDark">#ff0195ff</color>
+    <color name="colorAccent">#3492e9</color>
+    <color name="window_background">#ffeeeeee</color>
+    <color name="color_divider">#f3f3f3</color>
+    <color name="window_background_dark">#d7d7d7</color>
+
+    <!--基础Activity背景-->
+    <color name="base_frame_background">#fff6f6f6</color>
+    <color name="base_activity_background">@color/colorPrimary</color>
+    <!--分割线-->
+    <color name="list_divide_line">#fff7f7fa</color>
+    <!--SwipeRefreshLayout的加载圈-->
+    <color name="red_light">#ffff4444</color>
+    <color name="red_dark">#fff91818</color>
+    <color name="green_light">#ff99cc00</color>
+    <color name="blue_light">#ff33b5e5</color>
+    <color name="orange_light">#ffffbb33</color>
+    <color name="title_txt_white">#ffffff</color>
+    <color name="color_primary_text">#de000000</color>
+    <color name="color_secondary_text">#8a000000</color>
+    <color name="color_pressed">#FAFAFA</color>
+    <color name="color_ripple">#EEEEEE</color>
+    <color name="color_accent">#3492e9</color>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="BaseTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowContentTransitions">true</item>
+
+        <!-- specify enter and exit transitions -->
+        <!-- options are: explode, slide, fade -->
+        <!--
+        <item name="android:windowEnterTransition">@transition/change_image_transform</item>
+        <item name="android:windowExitTransition">@transition/change_image_transform</item>
+        -->
+
+        <!-- specify shared element transitions -->
+
+        <!--
+        <item name="android:windowSharedElementEnterTransition">@transition/change_image_transform</item>
+        <item name="android:windowSharedElementExitTransition">@transition/change_image_transform</item>
+        -->
+
+    </style>
+
+    <style name="AppTheme.FitsStatusBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BaseTheme.AppThemeLaunch">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--<style name="AppThemeLaunch" parent="BaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">?android:windowNoTitle</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@color/color_primary</item>
+    </style>-->
+
+
+    <!--Toolbar 公共样式-->
+    <style name="ToolBarBasic">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:elevation">1dp</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+    <style name="baseWidgetBackground">
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+    </style>
+</resources>
