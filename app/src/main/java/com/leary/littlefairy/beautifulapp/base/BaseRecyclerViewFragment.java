@@ -52,7 +52,7 @@ public abstract class BaseRecyclerViewFragment<T extends BasePresenter, M> exten
 
     @Override
     protected void initWidget(View root) {
-        mRecyclerView = (RecyclerView) root.findViewById(R.id.recyclerView);
+        mRecyclerView = (RecyclerView) root.findViewById(R.id.recyclerViewmain);
         mRefreshLayout = (RecyclerRefreshLayout) root.findViewById(R.id.refreshLayout);
         mErrorLayout = (EmptyLayout) root.findViewById(R.id.error_layout);
         mDefaultCallback = new MyDefaultCallback(getActivity());

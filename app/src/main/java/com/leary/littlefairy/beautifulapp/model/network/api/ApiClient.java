@@ -170,7 +170,7 @@ public final class ApiClient {
 
                 String httpPath = request.url().toString();
                 String strTimestamp = String.valueOf(System.currentTimeMillis() / 1000);
-                String token = "2BC3D5AB-5E71-191C-46B8-4E24E6DD4F70";
+                String token = "EE07B231-FA85-E2C8-F13B-7BB92FB095E4";
                 int uid = ApiDefine.USER_ID;
                 String appIdentify = ApiDefine.ID_APP_CLIENT_COMMON_PARENT;
                 String schoolCode = ApiDefine.ID_APP_SCHOOL_CODE;
@@ -185,7 +185,7 @@ public final class ApiClient {
                         jsonObject.addProperty(PARAMETER_UID,uid);//uid 用来反差token
                         jsonObject.addProperty(PARAMETER_TIMESTAMP,strTimestamp);//时间戳 用来限制请求时效
                         jsonObject.addProperty(PARAMETER_APP_IDENTIFY,appIdentify);//APP唯一标识
-                        jsonObject.addProperty(PARAMETER_SCHOOL_CODE,schoolCode);//学校编码,用来区分学校
+//                        jsonObject.addProperty(PARAMETER_SCHOOL_CODE,schoolCode);//学校编码,用来区分学校
                         jsonObject.addProperty(PARAMETER_TOKEN,token);//token 本地保存
                         LogUtils.e(httpPath + "$$" + jsonObject.toString());
                         RequestBody requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"),

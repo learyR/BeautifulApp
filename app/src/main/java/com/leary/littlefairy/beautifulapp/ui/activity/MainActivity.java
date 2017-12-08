@@ -37,19 +37,20 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import rx.Observer;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 
-public class MainActivity extends AppCompatActivity implements IMainView{
+public class MainActivity extends AppCompatActivity implements IMainView {
     private static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.banner)
     Banner banner;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.recyclerView)
+    @BindView(R.id.recyclerViewmain)
     RecyclerView recyclerView;
     @BindView(R.id.fab)
     FloatingActionButton fab;
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements IMainView{
             "读写手机存储",
             "获取手机信息"
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements IMainView{
 
     }
 
-    Observer<Result<List<HomeWork>>> mObservable = new Observer<Result<List<HomeWork>>>(){
+    Observer<Result<List<HomeWork>>> mObservable = new Observer<Result<List<HomeWork>>>() {
         @Override
         public void onCompleted() {
 
@@ -110,12 +112,13 @@ public class MainActivity extends AppCompatActivity implements IMainView{
             }
         }
     };
+
     private void initWidget() {
         mainPresenter = new MainPresenter(this, this, mSubscription);
         toolbar.setTitle("Hello My Fairy");
         toolbar.setNavigationIcon(R.drawable.lepay_icon_menu_white);
         mList = new ArrayList<>();
-        adapter = new HomeworkAdapter(this,mList);
+        adapter = new HomeworkAdapter(this, mList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
         mainPresenter.loadMainData();
@@ -125,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements IMainView{
     public void loadMainDataOk() {
         unsubscribe();
         mSubscription = ApiClient.service
-                .getMainData("leary", 272, 8, 1, 100/*,");50"
+                .getMainData("leary", 12477, 8, 1, 100/*,");50"
                         , String.valueOf(System.currentTimeMillis() / 1000)
                         ,"2BC3D5AB-5E71-191C-46B8-4E24E6DD4F70","0","10001"*/)
                 .subscribeOn(Schedulers.io())
@@ -133,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements IMainView{
                 .subscribe(mObservable);
 
     }
+
     @Override
     public void loadMainDataStart() {
 
@@ -173,6 +177,7 @@ public class MainActivity extends AppCompatActivity implements IMainView{
             super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
+
     private void getAppDetailSettingIntent(Context context) {
         Intent localIntent = new Intent();
         localIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -186,14 +191,21 @@ public class MainActivity extends AppCompatActivity implements IMainView{
         }
         startActivity(localIntent);
     }
+
     private void unsubscribe() {
         if (mSubscription != null && !mSubscription.isUnsubscribed()) {
             mSubscription.unsubscribe();
         }
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
         unsubscribe();
+    }
+
+    @OnClick(R.id.fab)
+    public void onViewClicked() {
+        startActivity(new Intent(this, RecyclerViewTestActivity.class));
     }
 }

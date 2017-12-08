@@ -19,7 +19,7 @@
             android:scrollbars="vertical" />
     </com.leary.littlefairy.beautifulapp.widget.RecyclerRefreshLayout>
 
-    <com.company.lepayTeacher.ui.widget.EmptyLayout
+    <com.leary.littlefairy.beautifulapp.widget.EmptyLayout
         android:id="@+id/error_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
