@@ -45,7 +45,7 @@ public class DefaultCallback<T> extends ForegroundCallback<T> {
     public boolean onResultAuthError(int code, Headers headers, Result.Error error) {
         //清空缓存
 //        UserShared.with(getActivity()).logout();
-        //TipInfo tipInfo = TipInfo.createTipInfo("", getActivity().getResources().getString(R.string.access_token_out_of_date));
+        //TipInfo tipInfo = TipInfo.createTipInfo("", getActivity().getResources().getMainData(R.string.access_token_out_of_date));
         TipInfo tipInfo = TipInfo.createTipInfo("", TextUtils.isEmpty(error.getErrorMessage()) ? getActivity().getResources().getString(R.string.access_token_out_of_date) : error.getErrorMessage());
         tipInfo.setSureBtnText("退出登录");
         if (!getActivity().isFinishing()) {
