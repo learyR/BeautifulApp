@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.leary.littlefairy.beautifulapp.R;
 import com.leary.littlefairy.beautifulapp.model.Entity.HomeWork;
@@ -128,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements IMainView {
     public void loadMainDataOk() {
         unsubscribe();
         mSubscription = ApiClient.service
-                .getMainData("leary", 12477, 8, 1, 100/*,");50"
+                .getMainData("182", 1, 20, 0, 0,""/*,");50"
                         , String.valueOf(System.currentTimeMillis() / 1000)
                         ,"2BC3D5AB-5E71-191C-46B8-4E24E6DD4F70","0","10001"*/)
                 .subscribeOn(Schedulers.io())
@@ -204,8 +205,8 @@ public class MainActivity extends AppCompatActivity implements IMainView {
         unsubscribe();
     }
 
-    @OnClick(R.id.fab)
-    public void onViewClicked() {
+    public void onViewClicked(View view) {
         startActivity(new Intent(this, RecyclerViewTestActivity.class));
     }
+
 }

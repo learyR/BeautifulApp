@@ -170,7 +170,7 @@ public final class ApiClient {
 
                 String httpPath = request.url().toString();
                 String strTimestamp = String.valueOf(System.currentTimeMillis() / 1000);
-                String token = "EE07B231-FA85-E2C8-F13B-7BB92FB095E4";
+                String token = "0CABB19C-13A9-2961-F604-2F4D13821E86";
                 int uid = ApiDefine.USER_ID;
                 String appIdentify = ApiDefine.ID_APP_CLIENT_COMMON_PARENT;
                 String schoolCode = ApiDefine.ID_APP_SCHOOL_CODE;

@@ -4,10 +4,13 @@ import android.app.Activity;
 
 import com.leary.littlefairy.beautifulapp.base.RxPresenter;
 import com.leary.littlefairy.beautifulapp.model.Entity.RepairReportDetailEntity;
+import com.leary.littlefairy.beautifulapp.model.Entity.RepairReportEntity;
 import com.leary.littlefairy.beautifulapp.model.Entity.Result;
 import com.leary.littlefairy.beautifulapp.model.network.DefaultCallback;
 import com.leary.littlefairy.beautifulapp.model.network.api.ApiClient;
 import com.leary.littlefairy.beautifulapp.ui.persenter.contracts.RecyclerViewContracts;
+
+import java.util.List;
 
 import retrofit2.Call;
 
@@ -16,14 +19,14 @@ import retrofit2.Call;
  */
 
 public class RecyclerViewTestPresenter extends RxPresenter<RecyclerViewContracts.View> implements RecyclerViewContracts.Presenter {
-    public Call<Result<RepairReportDetailEntity>> loadMoreCall = null;
+    public Call<Result<List<RepairReportEntity>>> loadMoreCall = null;
     public RecyclerViewTestPresenter() {
     }
 
     @Override
     public void getList(int page, DefaultCallback callBack, Activity activity) {
         if (loadMoreCall == null) {
-            loadMoreCall = ApiClient.service.getRepairList(page, 100,"12477");
+            loadMoreCall = ApiClient.service.getRepairList(page, 100,"182");
             loadMoreCall.enqueue(callBack);
         }
     }

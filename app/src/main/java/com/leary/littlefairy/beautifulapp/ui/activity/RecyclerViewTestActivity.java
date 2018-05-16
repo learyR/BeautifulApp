@@ -1,5 +1,7 @@
 package com.leary.littlefairy.beautifulapp.ui.activity;
 
+import android.content.Intent;
+
 import com.leary.littlefairy.beautifulapp.base.BaseRecyclerViewActivity;
 import com.leary.littlefairy.beautifulapp.base.BaseRecyclerViewAdapter;
 import com.leary.littlefairy.beautifulapp.model.Entity.RepairReportEntity;
@@ -67,5 +69,11 @@ public class RecyclerViewTestActivity extends BaseRecyclerViewActivity<RecyclerV
             page++;
         }
         mPresenter.getList(page, mDefaultCallback, this);
+    }
+
+    @Override
+    protected void onClickRight() {
+        super.onClickRight();
+        navigateTo(NetworkTestActivity.class.getName(), new Intent());
     }
 }
