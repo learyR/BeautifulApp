@@ -3,6 +3,7 @@ package com.leary.littlefairy.beautifulapp.app;
 import android.app.Application;
 
 import com.leary.littlefairy.beautifulapp.model.HttpProcessor.HttpHelper;
+import com.leary.littlefairy.beautifulapp.model.HttpProcessor.OkHttpProcessor;
 import com.leary.littlefairy.beautifulapp.model.HttpProcessor.VolleyProcessor;
 
 /**
@@ -16,8 +17,8 @@ public class AppController extends Application{
     public void onCreate() {
         super.onCreate();
         instance = this;
-        HttpHelper.init(new VolleyProcessor(this));
-        
+//        HttpHelper.init(new VolleyProcessor(this));
+        HttpHelper.init(new OkHttpProcessor());
     }
 
     public static AppController getInstance(){
